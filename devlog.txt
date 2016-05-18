@@ -1,0 +1,14 @@
+Team Gandof -- Arpita Abrol, Kyle Moon, Stanley Zeng
+APCS2 pd10
+DEVLOG
+
+
+2016-05-18
+
+* Came up with Sudoku idea utilizing Arrays of BSTs to solve the puzzle
+* Decided the execution was not as clear cut on how to use our java skills
+* Came up with a type of tower defense game utilizing processing for the visuals and stacks and queqe to play
+  * Linear game with a currency and units
+  * Using processing for its graphics and to show the game
+* And created the github repo
+* Started on the project proposal
