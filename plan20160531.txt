@@ -1,0 +1,14 @@
+We should start the project some way.
+Wrap our heads around how to utilize processing in the game.
+Get all the images necessary
+    Teachers faces
+    Student faces
+    Backdrop for the battlefield (grass land)
+    Castles
+    full size brown picture
+Create deadlines for making parts of the projects
+       Player/user class
+       Student class
+       Teacher/enemy class
+       which students are what unit
+       which teacher is what unit
