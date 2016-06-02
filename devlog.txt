@@ -4,7 +4,7 @@ DEVLOG
 
 
 2016-05-18
-
+Arpita, Kyle, Stanley
 * Came up with Sudoku idea utilizing Arrays of BSTs to solve the puzzle
 * Decided the execution was not as clear cut on how to use our java skills
 * Came up with a type of tower defense game utilizing processing for the visuals and stacks and queqe to play
@@ -12,3 +12,13 @@ DEVLOG
   * Using processing for its graphics and to show the game
 * And created the github repo
 * Started on the project proposal
+
+2016-05-31
+Arpita, Kyle, Stanley
+* Created the plan for when we should have things done by
+
+2016-05-31
+Arpita
+* Created the main file
+* Began work on the field
+* Began work on students class
