@@ -26,3 +26,23 @@ Arpita
 2016-06-01
 Arpita
 * Began work on castles
+
+2016-06-02
+Kyle, Arpita (Stanley absent)
+* Layed out the classes, currencies, and student classes
+  * Passive income of ~2 mana per second
+    * 2 mana for the lowest class/least powerful
+      * Freshman
+      * Genkina
+    * 4 mana
+      * Sophomores
+    * 8 mana
+      * Intro to CS
+    * 16 mana
+      * Juniors
+    * 32 mana
+      * APCS squad
+    * 64 mana 
+      * Seniors
+    * 128 mana
+      * CS DOJO
