@@ -1,0 +1,57 @@
+TO IMPLEMENT:
+STACKS
+  * 'AI' (Enemies)
+    * Pre-determined Stack
+
+QUEUES
+  * Player
+    * Player can only send out one unit at a time. Units that are selected before the timer is up will be added to a queue
+        and sent out once the timer ends
+
+
+CURRENT CLASS SUMMARY:
+
+game:
+  Summary: Driver File
+  Functionality:
+    * Run of the mill driver file. Sets-up the field, calls the Player to do their thing
+
+Castles class:
+  Summery: This class in in charge of the castles (2, one per player)
+  Functionality: 
+    * Keeps tracks of stats and whatnot- like health
+
+Enemies Class:
+  Summery: This class is in charge of the enemies that a Player must defeat
+  Functionality: 
+    * Type will determine the stats (base stats are hardcoded, and then there is a multiplier depending on the level)
+
+Levels Class:
+  Summery: This class will generate levels.
+  Functionality: 
+    * Will contain all the instance vars needed to generate each level
+    * Will have a play method to play through the level
+
+Player Class:
+  Summery: Driver will call this file to run the game, using recursion
+  Functionality: 
+    * Will have a recursive funcion that goes through the levels and may later on have a store.
+
+Students Class:
+  Summery: This class is in charge of a Player's units that they can send out
+  Functionality: 
+    * Type will determine the stats (base stats are hardcoded, and then there is a multiplier depending on the level)
+
+
+REACH/IDEAS FOR EXPANSION:
+
+Saving feature: Pretty simple to do (CSVs, edit driver, etc)
+
+Gold feature: Players get a certain amount of gold and can use gold to buy more powerful units and permanent upgrades
+              for their purchased units, mana count, mana timer, castle, etc. Can also be used to supplement the upgrading
+              feature (See below) for more powerful in-battle upgrades
+
+In-game upgrading feature: Players may use their mana to purchase temporary upgrades for their units in battle. 
+    * Upgrades can last for the duration of the battle or for 15 seconds or both options depending on the amount of mana used.
+    * Gold can be implements (see Gold feature)
+    * Have player sacrifice mana cap in order to receive upgrades before the battle begins?

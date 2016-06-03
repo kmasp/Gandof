@@ -32,6 +32,8 @@ Arpita
 * Castles: constructors, accessors, mutators, instance vars, draw(), setup()
 * Player: created class; instance vars, constructors. accessors, mutators
 * Students: added types
+* Enemies: created class; instance vars, constructors, accessors, mutators, types
+* game: minor dev
 
 2016-06-02
 Kyle, Arpita (Stanley absent)
@@ -58,3 +60,7 @@ Kyle, Arpita (Stanley absent)
     * 128 mana
       * CS DOJO
       * Brown
+
+2016-06-03
+Arpita
+* Created and updated ClassOverview.txt
