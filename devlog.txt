@@ -19,10 +19,36 @@ Arpita, Kyle, Stanley
 
 2016-05-31
 Arpita
-* Created the main file
+* Created the main file, game
 * Began work on the field
-* Began work on students class
+* Began work on Students class
 
 2016-06-01
 Arpita
 * Began work on castles
+
+2016-06-02
+Arpita
+* Castles: constructors, accessors, mutators, instance vars, draw(), setup()
+* Player: created class; instance vars, constructors. accessors, mutators
+* Students: added types
+
+2016-06-02
+Arpita, Kyle
+* Created Values:
+ Types of Enemies and Cost
+  002 -- Genkina
+  004 -- Holmes
+  008 -- Brooks
+  016 -- Platek
+  032 -- K
+  064 -- DW
+  128 -- Brown
+ Types of Students & Costs
+  002 -- Freshies
+  004 -- Sophs
+  008 -- IntroCS
+  016 -- Juniors
+  032 -- APCS
+  064 -- Seniors
+  128 -- CS Dojo

@@ -2,7 +2,6 @@
 PImage back;
 Castles castle;
 
-
 void setup() {
     size(640,360);
     back = loadImage("grasssky.jpg");
@@ -12,4 +11,5 @@ void setup() {
 
 void draw() {
     image(back,0,0);
+    castle.draw();
 }

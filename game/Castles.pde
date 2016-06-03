@@ -26,7 +26,8 @@ class Castles {
   }
   
   void draw() {
+    setup();
     image( castle, 50, 100 );
   }
   
-}
+} //end class
