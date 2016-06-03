@@ -34,21 +34,27 @@ Arpita
 * Students: added types
 
 2016-06-02
-Arpita, Kyle
-* Created Values:
- Types of Enemies and Cost
-  002 -- Genkina
-  004 -- Holmes
-  008 -- Brooks
-  016 -- Platek
-  032 -- K
-  064 -- DW
-  128 -- Brown
- Types of Students & Costs
-  002 -- Freshies
-  004 -- Sophs
-  008 -- IntroCS
-  016 -- Juniors
-  032 -- APCS
-  064 -- Seniors
-  128 -- CS Dojo
+Kyle, Arpita (Stanley absent)
+* Layed out the classes, currencies, and student classes
+  * Passive income of ~2 mana per second
+    * 2 mana for the lowest class/least powerful
+      * Freshman
+      * Genkina
+    * 4 mana
+      * Sophomores
+      * Holmes
+    * 8 mana
+      * Intro to CS
+      * Brooks
+    * 16 mana
+      * Juniors
+      * Platek
+    * 32 mana
+      * APCS squad
+      * K
+    * 64 mana 
+      * Seniors
+      * DW
+    * 128 mana
+      * CS DOJO
+      * Brown
