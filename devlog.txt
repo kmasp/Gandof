@@ -64,3 +64,7 @@ Kyle, Arpita (Stanley absent)
 2016-06-03
 Arpita
 * Created and updated ClassOverview.txt
+
+2016-06-09
+Stanley
+* Created Levels class
