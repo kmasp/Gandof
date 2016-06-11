@@ -23,11 +23,13 @@ class Castles {
   
   void setup() {
    castle = loadImage("castle.png"); 
+   castle.resize(75,75);
   }
   
   void draw() {
     setup();
-    image( castle, 50, 100 );
+    image( castle, 30, 225 );
+    image( castle, 550, 225 );
   }
   
 } //end class
