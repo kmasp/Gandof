@@ -15,5 +15,9 @@ void draw() {
 }
 
 static public void main(String args[]) {
+    Castles castle = new Castles();
+    Enemies enemies = new Enemies();
+    Player player = new Player();
+    Students students = new Students();
     
 }
