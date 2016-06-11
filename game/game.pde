@@ -1,3 +1,4 @@
+import java.util.Queue;
 import java.util.LinkedList;
 PImage back;
 PImage castlePic;
@@ -30,8 +31,17 @@ void draw() {
   System.out.println("Level 1");
   Player P1 = new Player();
   Levels L1 = new Levels( P1, 1 );
+  playing = true;
   L1.draw();
   
   System.out.println("Level 2");
   
+}
+
+void keyPressed() {
+  if( playing && key >= 1 && key <= 7 ) {
+    Students x = new Students( key );
+    P1.units.add( x );
+    System.out.println("new unit");
+  }
 }
