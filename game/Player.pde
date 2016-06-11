@@ -1,9 +1,12 @@
 class Player {
-    //instance vars
+  
+  //instance vars
   int[] mana; //amount of mana; [current, maxForGame]
   int manaRegen; //rate at which mana regenerates
   int gold; //amount of gold
   Queue<Students> units = new LinkedList<Students>();
+  ArrayList<Students> currUnits; //all current students, dead or alive
+  
   
   //constructor
   Player() {
@@ -28,7 +31,20 @@ class Player {
     mana[1] = newM;
   }
   
+  //increases amount of mana player currently has
   void increaseMana() {
-   setMana( getMana() + 1 ); 
+    if( mana[0] >= mana[1] ) {
+     setMana( getMana() + 1 ); 
+    }
   }
+  
+  void draw() {
+    for( Students x : currUnits ) {
+      if( x.alive ) {
+        x.changeX();
+        x.draw();
+      }
+    }
+  }
+  
 } //end class

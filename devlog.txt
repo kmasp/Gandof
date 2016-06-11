@@ -69,13 +69,19 @@ Arpita
 Stanley
 * Created Levels class
 
-2016-06-11
-Stanley
-* Worked on driver class
-  Update Levels to include consructor
-
 2016-06-10
 Arpita
 * Created Levels, Opponent class
 * Working on implementing queues 
 * Worked on beginning the game and how it would go (i.e. sending out units and whatnot)
+
+
+2016-06-11
+Stanley
+* Worked on driver class
+  Update Levels to include consructor
+
+2016-06-11
+Arpita
+* game: worked on accepting user input
+* Player, Students: worked on identifying alive students and moving them

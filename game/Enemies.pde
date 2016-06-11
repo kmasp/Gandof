@@ -9,7 +9,7 @@ class Enemies {
   5 -- 032 -- K
   6 -- 064 -- DW
   7 -- 128 -- Brown
-  */
+  */  
   
   //instance vars
   int health;   //how much health an enemy has

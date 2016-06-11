@@ -2,7 +2,7 @@ class Levels {
   
   //instance vars
   int level;
-  Player p1;
+  Player p1; 
   
   //constructor
   Levels( Player p, int l ) {

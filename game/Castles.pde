@@ -14,7 +14,7 @@ class Castles {
   }
   
   int getHealth() {
-    return health;
+    return health; 
   }
   
   void setHealth( int newHealth ) {

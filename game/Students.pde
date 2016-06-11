@@ -1,3 +1,5 @@
+PImage pic;
+
 class Students {
   
   /*
@@ -18,6 +20,9 @@ class Students {
   int cost;    //how much a student costs to buy (mana)
   int cooldown; //how long you have to wait before the next unit is deployed
   int type; //what type of student this is
+  boolean alive; //if student is alive or dead
+  int xcor; //x coordinate
+  int ycor; //ycordinate
   
   //constructors
   Students( int newType ) {
@@ -65,7 +70,24 @@ class Students {
     }
     type = newType;
     cooldown = cost * cost;
+    alive = true;
+    xcor = 20;
+    ycor = 220;
   }
-}
   
   //methods
+  void changeX() {
+    xcor++;
+  }
+
+  void setup() {
+    pic = loadImage("person.jpg");
+  }
+ 
+  //methods
+  void draw() {
+    setup();
+    image(pic, xcor, ycor);
+  }
+  
+} //end class

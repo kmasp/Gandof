@@ -39,7 +39,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if( playing && key >= 1 && key <= 7 ) {
+  if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
     Students x = new Students( key );
     P1.units.add( x );
     System.out.println("new unit");
