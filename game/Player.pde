@@ -6,6 +6,7 @@ class Player {
   int gold; //amount of gold
   Queue<Students> units = new LinkedList<Students>();
   ArrayList<Students> currUnits; //all current students, dead or alive
+  int[] castle; //castle health; [current, max]
   
   
   //constructor
@@ -13,6 +14,9 @@ class Player {
     mana = new int[2];
     mana[0] = 100;
     mana[1] = 100;
+    castle = new int[2];
+    castle[0] = 100;
+    castle[1] = 100;
   }
   
   //methods
@@ -37,6 +41,22 @@ class Player {
      setMana( getMana() + 1 ); 
     }
   }
+  
+  //get current castle health
+  int getCastleHealth() {
+    return castle[0]; 
+  }
+  
+  //set castle health
+  void setCastleHealth( int newHealth ) {
+    castle[0] = newHealth;
+  }
+  
+  //set max castle health
+  void setMaxCastleHealth( int newHealth ) {
+    castle[1] = newHealth;
+  }
+  
   
   void draw() {
     for( Students x : currUnits ) {

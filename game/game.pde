@@ -33,7 +33,6 @@ void draw() {
   Levels L1 = new Levels( P1, 1 );
   playing = true;
   L1.draw();
-  
   System.out.println("Level 2");
   
 }
