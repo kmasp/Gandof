@@ -7,6 +7,7 @@ class Player {
   Queue<Students> units = new LinkedList<Students>();
   ArrayList<Students> currUnits; //all current students, dead or alive
   int[] castle; //castle health; [current, max]
+  boolean playerLost; //if player lost, game ends
   
   
   //constructor
@@ -17,6 +18,7 @@ class Player {
     castle = new int[2];
     castle[0] = 100;
     castle[1] = 100;
+    currUnits = new ArrayList<Students>();
   }
   
   //methods
@@ -59,10 +61,14 @@ class Player {
   
   
   void draw() {
-    for( Students x : currUnits ) {
-      if( x.alive ) {
-        x.changeX();
-        x.draw();
+    Students a = new Students(1);
+    currUnits.add(a);
+    if( currUnits.size() > 0 ) {
+      for( Students x : currUnits ) {
+        if( x.alive ) {
+          x.changeX();
+          x.draw();
+        }
       }
     }
   }

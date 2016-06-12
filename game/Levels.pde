@@ -2,19 +2,19 @@ class Levels {
   
   //instance vars
   int level;
-  Player p1; 
+  Player pP; 
   
   //constructor
   Levels( Player p, int l ) {
-   p1 = p; 
+   P1 = p; 
    level = l;
   }
   
   //methods
   
-  void draw() {
+  Player draw() {
     
-
+    return P1; 
   }
 
   

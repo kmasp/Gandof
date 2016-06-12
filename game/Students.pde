@@ -71,8 +71,8 @@ class Students {
     type = newType;
     cooldown = cost * cost;
     alive = true;
-    xcor = 20;
-    ycor = 220;
+    xcor = 45;
+    ycor = 185;
   }
   
   //methods
@@ -81,13 +81,13 @@ class Students {
   }
 
   void setup() {
-    pic = loadImage("person.jpg");
+    pic = loadImage("1.png");
   }
  
   //methods
   void draw() {
     setup();
-    image(pic, xcor, ycor);
+    image(pic, xcor, ycor, 60, 60);
   }
   
 } //end class

@@ -86,3 +86,5 @@ Arpita
 * game: worked on accepting user input
 * Player, Students: worked on identifying alive students and moving them
 * Castles, Player: removed Castles class and implemented Castles into player class
+* game: created all needed images (excluding enemies)
+* Player, Students: began testing student movement functionality
