@@ -78,6 +78,16 @@ class Enemies {
     xcor++;
   }
   
+  //returns an enemies's power
+  int getPower() {
+    return power;
+  }
+  
+  //returns if an enemy is alive
+  boolean isAlive() {
+    return alive; 
+  }
+  
   //returns the current health of an enemy
   int getHealth() {
     return health; 
@@ -96,6 +106,7 @@ class Enemies {
   
   void setup() {
     picS = loadImage(type+".png"); //temp, until enemy pics are generated
+    loop();
   }
  
   void draw() {

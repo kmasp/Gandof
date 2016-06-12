@@ -93,6 +93,16 @@ class Students {
     xcor++;
   }
   
+  //returns a student's power
+  int getPower() {
+    return power; 
+  }
+  
+  //returns if a student is alive
+  boolean isAlive() {
+    return alive; 
+  }
+  
   //returns the current health of a student
   int getHealth() {
     return health; 

@@ -35,9 +35,9 @@ void setup() {
   B6 = loadImage("S6.jpg");
   B7 = loadImage("S7.jpg");
   smooth();
-  noLoop();
   frameRate(60);
   P1 = new Player();
+  noLoop();
 }
 
 void draw() {

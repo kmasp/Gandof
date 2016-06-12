@@ -6,7 +6,7 @@ class Player {
   Queue<Students> units = new LinkedList<Students>(); //Queue of queued units, to be put into currUnits
   ArrayList<Students> currUnits; //all current students, dead or alive
   int[] castle; //castle health; [current, max]
-  boolean playerLost = false; //if player lost, game ends
+  boolean alive = true; //if player not alive, game ends
   
   //int gold; //amount of gold Note: NOT YET IMPLEMENTED
   
@@ -53,6 +53,9 @@ class Player {
   //set castle health
   void setCastleHealth( int newHealth ) {
     castle[0] = newHealth;
+    if( castle[0] <= 0 ) {
+      alive = false;
+    }
   }
   
   //set max castle health
@@ -63,9 +66,7 @@ class Player {
   //resets a player to original vals
   void reset() {
     mana[0] = mana[1];
-    while( currUnits.size() > 0 ) {
-      currUnits.remove(0); 
-    }
+    currUnits.clear();
     while( units.size() > 0 ) {
       units.remove();
     }
@@ -76,11 +77,11 @@ class Player {
   //Processing Methods
   
   void setup() {
-    
+    loop();
   }
   
   void draw() {
-    if( !playerLost ) {
+    if( !alive ) {
       if( currUnits.size() > 0 ) {
         for( Students x : currUnits ) {
           if( x.alive ) {
@@ -88,13 +89,11 @@ class Player {
             x.draw();
           }
         }
-      }
-      
-      if( castle[0] <= 0 ) {
-        playerLost = true; 
-      }
-      
+      }  
     } //end main if
+    else {
+      noLoop(); 
+    }
   } //end draw
   
 } //end class

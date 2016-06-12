@@ -86,7 +86,7 @@ Arpita
 * game: worked on accepting user input
 * Player, Students: worked on identifying alive students and moving them
 * Castles, Player: removed Castles class and implemented Castles into player class
-* game: created all needed images (excluding enemies)
+* game: created all needed images (excluding enemies). Added reset()
 * Player, Students: began testing student movement functionality
 * Students: added variables, fixed how students would work. Added getHealth(), setHealth(), changeX()
 * Enemies: changed values, added variables. Added getHealth(), setHealth(), changeX(), setup(), draw(), 
@@ -94,4 +94,10 @@ Arpita
 
 2016-06-12
 Arpita
-* Levels: 
+* Summary: did a ton of stuff to prepare for characters to attack, fight, die, play levels, etc
+* all: adjusted setup() and draw()
+* Levels: added attack()
+* Opponent: created population system (enemy generation). Incorporated castles. Added populate(int), backup(), getCastleHealth(), setCastleHealth(int), setMaxCastleHealth(int).
+* Player, Opponent: incorporated alive or not system
+* Enemies: added getPower(), isAlive()
+* Students: added getPower(), isAlive()
