@@ -1,6 +1,8 @@
-//import packages
+//import packages needed
+import java.util.Stack;
 import java.util.Queue;
 import java.util.LinkedList;
+
 //images
 PImage back;
 PImage castlePic;
@@ -15,6 +17,8 @@ PImage B7;
 
 //booleans
 boolean playing = false;
+
+//objects
 Player P1;
 
 void setup() {
@@ -32,11 +36,48 @@ void setup() {
   B7 = loadImage("S7.jpg");
   smooth();
   noLoop();
+  frameRate(60);
   P1 = new Player();
 }
 
 void draw() {
   setup();
+  
+  //Note: This will be added to the game screen at one point
+  System.out.println("Welcome Player.");
+  delay(120);
+  System.out.println("This is a castle defense game. You will be given MANA to use at the beginning of every round, and you must purchase units in order to defend your castle.");
+  delay(120);
+  System.out.println("If you do not defend your castle, then you will lose a life and die.");
+  delay(120);
+  System.out.println("Let's begin.");
+  
+  reset();
+  
+  //LEVEL 1
+  System.out.println("Level 1");
+  Player P1 = new Player();
+  Levels L1 = new Levels( P1, 1 );
+  playing = true;
+  P1 = L1.draw();
+  P1.draw();
+  
+  //reset();
+  System.out.println("Level 2");
+  
+}
+
+//User input for keys pressed
+void keyPressed() {
+  if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
+    Students x = new Students( key );
+    P1.units.add( x );
+    System.out.println("new unit");
+  }
+}
+
+//'resets' the screen to game mode
+void reset() {
   image(back,0,-200,960,540);
   image(castlePic,20,150,100,100);
   image(castlePic,835,150,100,100);
@@ -48,26 +89,4 @@ void draw() {
   image(B5,600,340,120,120);
   image(B6,720,340,120,120);
   image(B7,840,340,120,120);
-  //Note: This will be added to the game screen at one point
-  System.out.println("Welcome Player.");
-  System.out.println("This is a castle defense game. You will be given MANA to use at the beginning of every round, and you must purchase units in order to defend your castle.");
-  System.out.println("If you do not defend your castle, then you will lose a life and die.");
-  System.out.println("Let's begin.");
-  
-  System.out.println("Level 1");
-  Player P1 = new Player();
-  Levels L1 = new Levels( P1, 1 );
-  playing = true;
-  P1 = L1.draw();
-  P1.draw();
-  System.out.println("Level 2");
-  
-}
-
-void keyPressed() {
-  if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
-    Students x = new Students( key );
-    P1.units.add( x );
-    System.out.println("new unit");
-  }
 }

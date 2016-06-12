@@ -1,16 +1,19 @@
 class Levels {
   
   //instance vars
-  int level;
-  Player pP; 
+  int level; //current level
+  Player P1; //Player
+  Opponent O1; //Opponent
   
   //constructor
   Levels( Player p, int l ) {
    P1 = p; 
    level = l;
+   O1 = new Opponent( level );
   }
   
-  //methods
+  
+  //Processing methods
   
   Player draw() {
     

@@ -3,11 +3,12 @@ class Player {
   //instance vars
   int[] mana; //amount of mana; [current, maxForGame]
   int manaRegen; //rate at which mana regenerates
-  int gold; //amount of gold
-  Queue<Students> units = new LinkedList<Students>();
+  Queue<Students> units = new LinkedList<Students>(); //Queue of queued units, to be put into currUnits
   ArrayList<Students> currUnits; //all current students, dead or alive
   int[] castle; //castle health; [current, max]
-  boolean playerLost; //if player lost, game ends
+  boolean playerLost = false; //if player lost, game ends
+  
+  //int gold; //amount of gold Note: NOT YET IMPLEMENTED
   
   
   //constructor
@@ -59,18 +60,41 @@ class Player {
     castle[1] = newHealth;
   }
   
+  //resets a player to original vals
+  void reset() {
+    mana[0] = mana[1];
+    while( currUnits.size() > 0 ) {
+      currUnits.remove(0); 
+    }
+    while( units.size() > 0 ) {
+      units.remove();
+    }
+    castle[0] = castle[1];
+  }
+  
+  
+  //Processing Methods
+  
+  void setup() {
+    
+  }
   
   void draw() {
-    Students a = new Students(1);
-    currUnits.add(a);
-    if( currUnits.size() > 0 ) {
-      for( Students x : currUnits ) {
-        if( x.alive ) {
-          x.changeX();
-          x.draw();
+    if( !playerLost ) {
+      if( currUnits.size() > 0 ) {
+        for( Students x : currUnits ) {
+          if( x.alive ) {
+            x.changeX();
+            x.draw();
+          }
         }
       }
-    }
-  }
+      
+      if( castle[0] <= 0 ) {
+        playerLost = true; 
+      }
+      
+    } //end main if
+  } //end draw
   
 } //end class

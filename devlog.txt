@@ -75,7 +75,6 @@ Arpita
 * Working on implementing queues 
 * Worked on beginning the game and how it would go (i.e. sending out units and whatnot)
 
-
 2016-06-11
 Stanley
 * Worked on driver class
@@ -83,8 +82,16 @@ Stanley
 
 2016-06-11
 Arpita
+* deleted Stanley’s code (most of it wasn’t in Processing, or even Java)
 * game: worked on accepting user input
 * Player, Students: worked on identifying alive students and moving them
 * Castles, Player: removed Castles class and implemented Castles into player class
 * game: created all needed images (excluding enemies)
 * Player, Students: began testing student movement functionality
+* Students: added variables, fixed how students would work. Added getHealth(), setHealth(), changeX()
+* Enemies: changed values, added variables. Added getHealth(), setHealth(), changeX(), setup(), draw(), 
+* Player: changed variables around. Worked on draw(). Added reset()
+
+2016-06-12
+Arpita
+* Levels: 

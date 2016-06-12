@@ -1,4 +1,4 @@
-PImage pic;
+PImage picS;
 
 class Students {
   
@@ -18,76 +18,104 @@ class Students {
   //int speed;   //how fast a student travels
   int power;   //how strong a student is
   int cost;    //how much a student costs to buy (mana)
-  int cooldown; //how long you have to wait before the next unit is deployed
+  int cooldown; //how long you have to wait to deploy this unit
   int type; //what type of student this is
   boolean alive; //if student is alive or dead
   int xcor; //x coordinate
-  int ycor; //ycordinate
+  int ycor; //y cordinate
+  int w; //unit width
+  int h; //unit height
   
-  //constructors
+  //constructor
   Students( int newType ) {
     //Freshies
     if( newType == 1 ) {
       health = 25;
       power = 5;
       cost = 2;
+      h = 50;
     }
     //Sophs
     else if( newType == 2 ) {
-      health = 35;
+      health = 50;
       power = 10;
       cost = 4;
+      h = 50;
     }
     //IntroCS
     else if( newType == 3 ) {
-      health = 45;
-      power = 15;
+      health = 75;
+      power = 25;
       cost = 8;
+      h = 46;
     }
     //Juniors
     else if( newType == 4 ) {
-      health = 55;
-      power = 20;
-      cost = 16;      
+      health = 75;
+      power = 45;
+      cost = 16;  
+      h = 56;
     }
     //APCS
     else if( newType == 5 ) {
-      health = 65;
-      power = 25;
+      health = 100;
+      power = 45;
       cost = 32;
+      h = 59;
     }
     //Seniors
     else if( newType == 6 ) {
-      health = 75;
+      health = 200;
       power = 30;
       cost = 64;
+      h = 56;
     }
     //CS Dojo Sensei
     else {
-      health = 150;
+      health = 300;
       power = 50;
       cost = 128;
+      h = 41;
     }
     type = newType;
     cooldown = cost * cost;
     alive = true;
-    xcor = 45;
-    ycor = 185;
+    xcor = 50;
+    ycor = 205;
+    w = 50;
   }
   
+  
   //methods
+  
+  //makes student 'walk'
   void changeX() {
     xcor++;
   }
+  
+  //returns the current health of a student
+  int getHealth() {
+    return health; 
+  }
+  
+  //changes amount of health a student has; changes from alive to dead if needed
+  void setHealth( int newHealth ) {
+    health = newHealth;
+    if( health <= 0 ) {
+      alive = false;
+    }
+  }
 
+
+  //Processing Methods
+  
   void setup() {
-    pic = loadImage("1.png");
+    picS = loadImage(type+".png");
   }
  
-  //methods
   void draw() {
     setup();
-    image(pic, xcor, ycor, 60, 60);
+    image(picS, xcor, ycor, w, h);
   }
   
 } //end class
