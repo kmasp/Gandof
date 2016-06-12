@@ -101,3 +101,5 @@ Arpita
 * Player, Opponent: incorporated alive or not system
 * Enemies: added getPower(), isAlive()
 * Students: added getPower(), isAlive()
+Stanley
+* Player: Created Cooldown
