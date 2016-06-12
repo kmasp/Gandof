@@ -7,6 +7,10 @@ class Player {
   ArrayList<Students> currUnits; //all current students, dead or alive
   int[] castle; //castle health; [current, max]
   boolean alive = true; //if player not alive, game ends
+  int time; //timer
+  int wait; //waittime
+  boolean isCool = false;
+  
   
   //int gold; //amount of gold Note: NOT YET IMPLEMENTED
   
@@ -75,8 +79,14 @@ class Player {
   
   
   //Processing Methods
-  
+  void cooldown(){
+    wait = 3000; //universal 3 second cooldown for all units
+    if (millis() - time >= wait){
+      isCool = true;
+    }
+  }
   void setup() {
+    time = millis();
     loop();
   }
   
