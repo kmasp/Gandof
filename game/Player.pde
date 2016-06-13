@@ -81,10 +81,11 @@ class Player {
     castle[0] = castle[1];
   }
   
-  //???
+  //essentially a 3 second timer, if isCool is true: units won't be sent out 
   void cooldown(){
     wait = 3000; //universal 3 second cooldown for all units
-    if (millis() - time >= wait){
+    if (millis() - time >= wait)
+    {
       isCool = true;
     }
   }
