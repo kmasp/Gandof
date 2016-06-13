@@ -103,6 +103,7 @@ Arpita
 * Students: added getPower(), isAlive(), getX()
 * began to utilize lots of global variables for game transition- I <3 global vars
 * fixed issues with looping
+* Removed what Stanley did with queues. Not using Java/Processing (used keywords that didn’t exist, didn’t create boolean that was used in it, function has no use in current state and current implementation (partially implemented in game class also))
 
 2016-06-12
 Stanley
