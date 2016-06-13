@@ -1,3 +1,7 @@
+import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
+
 class Player {
   
   //instance vars
@@ -86,6 +90,18 @@ class Player {
     if (millis() - time >= wait)
     {
       isCool = true;
+    }
+  }
+  
+  void queue(Students x){
+  if (isEmpty = false){
+    if (isCool = true){
+      units.enqueue(x);
+    }
+    else {
+      units.dequeue(x);
+      currUnits.add(x);
+      }
     }
   }
   
