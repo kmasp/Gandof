@@ -117,3 +117,5 @@ Arpita
 * Player: edited draw(), changed variable stuff. Added gainMana()
 * Levels, Player: implemented mana region system. 
 * Levels: fixed move()
+* Enemies: fixed units not showing up bug
+* very basic version of game now playable
