@@ -61,7 +61,7 @@ void draw() {
     delay(1000);
     System.out.println("Click ENTER to begin.");
     delay(1000);
-    reset();
+    resetScreen();
     intro = false;
   }
     
@@ -160,7 +160,7 @@ boolean purchase( int amount ) {
 
 
 //'resets' the screen to game mode
-void reset() {
+void resetScreen() {
   image(back,0,-200,960,540);
   image(castlePic,20,150,100,100);
   image(castlePic,835,150,100,100);

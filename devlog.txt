@@ -112,6 +112,8 @@ Stanley
 2016-06-13
 Arpita
 * all: added/edited keyPressed()
-* game: edited keyPressed(). Added purchase()
+* game: edited keyPressed(). Added purchase(). changed reset() to resetScreen()
 * Opponents: edited draw(), setup()
-* Player: edited draw(), changed variable stuff, 
+* Player: edited draw(), changed variable stuff. Added gainMana()
+* Levels, Player: implemented mana region system. 
+* Levels: fixed move()

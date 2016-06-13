@@ -45,6 +45,7 @@ class Levels {
   //moving units
   void move() {
     if( !(P1.currUnits.isEmpty()) && !(O1.currUnits.isEmpty()) ) {
+      System.out.println("a");
       Students s1 = P1.currUnits.get(0);
       Enemies e1 = O1.currUnits.get(0);
       if( abs( s1.getX() - e1.getX() ) <= 50 ) {
@@ -61,15 +62,25 @@ class Levels {
           }
         }
       }
+      else {
+        for( Students s : P1.currUnits ) {
+          s.changeX();
+        }
+        for( Enemies e : O1.currUnits ) {
+          e.changeX(); 
+        }
+      }
       P1.currUnits.add( 0, s1 );
       O1.currUnits.add( 0, e1 );
     }
     else if( !(P1.currUnits.isEmpty()) ) {
+      System.out.println("b");
       for( Students s : P1.currUnits ) {
         s.changeX(); 
       }
     }
     else if( !(O1.currUnits.isEmpty()) ) {
+      System.out.println("c");
       for( Enemies e : O1.currUnits ) {
         e.changeX(); 
       }
@@ -83,14 +94,16 @@ class Levels {
   }
   
   void draw() {
-    delay(1000);
+    //delay(1000);
+    P1.gainMana();
     P1.createUnits();
     O1.createUnits();
     move();
+    resetScreen();
     P1.draw();
     O1.draw();
     attack();
-    System.out.println("hi");
+    //System.out.println("hi");
   }
   
 

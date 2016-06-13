@@ -46,8 +46,15 @@ class Player {
   
   //increases amount of mana player currently has
   void increaseMana() {
-    if( mana[0] >= mana[1] ) {
-     setMana( getMana() + 1 ); 
+    if( mana[0] <= mana[1] ) {
+     setMana( getMana() + 2 ); 
+    }
+  }
+  
+  //alt system to gain mana
+  void gainMana() {
+    if( frameCount % 10 == 0 && mana[0] <= mana[1] ) {
+      setMana( getMana() + 2 );
     }
   }
   
@@ -104,10 +111,10 @@ class Player {
   }
   
   void draw() {
+    gainMana();
     if( currUnits.size() > 0 ) {
-      for( Students x : currUnits ) {{
+      for( Students x : currUnits ) {
           x.draw();
-        }
       }
     }  
   } //end draw
