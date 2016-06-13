@@ -7,6 +7,7 @@ class Opponent {
   long currFrame; //current frame count
   int[] castle; //castle health; [current, max]
   boolean alive = true; //if opponent is not alive, level won
+  boolean moving = true; //if opponent's units are moving or not
   
   //constructor
   Opponent( int currLevel ) {
@@ -14,6 +15,7 @@ class Opponent {
     populate( level );
     currFrame = frameCount;
     currUnits = new ArrayList<Enemies>();
+    castle = new int[2];
     castle[0] = 100 + level * 5;
     castle[0] = 100 + level * 5;
   }
@@ -114,7 +116,17 @@ class Opponent {
   }
   
   void draw() {
-    
+    if( !alive ) {
+      if( currUnits.size() > 0 ) {
+        for( Enemies x : currUnits ) {{
+            x.draw();
+          }
+        }
+      }  
+    } //end main if
+    else {
+      noLoop(); 
+    }
   }
   
 } //end class

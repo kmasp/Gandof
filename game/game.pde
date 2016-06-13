@@ -67,6 +67,7 @@ void draw() {
   
 }
 
+
 //User input for keys pressed
 void keyPressed() {
   if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
@@ -75,6 +76,7 @@ void keyPressed() {
     System.out.println("new unit");
   }
 }
+
 
 //'resets' the screen to game mode
 void reset() {

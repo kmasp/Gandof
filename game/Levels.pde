@@ -33,6 +33,48 @@ class Levels {
       Students s1 = P1.currUnits.get(0);
       O1.setCastleHealth( O1.getCastleHealth() - s1.getPower() );
       P1.currUnits.add( 0, s1 );
+      O1.backup();
+      O1.backup();
+      O1.backup();
+    }
+    else if( !(O1.currUnits.isEmpty()) ) {
+      Enemies e1 = O1.currUnits.get(0);
+      P1.setCastleHealth( P1.getCastleHealth() - e1.getPower() );
+      O1.currUnits.add( 0, e1 );
+    }
+  }
+  
+  //moving units
+  void move() {
+    if( !(P1.currUnits.isEmpty()) && !(O1.currUnits.isEmpty()) ) {
+      Students s1 = P1.currUnits.get(0);
+      Enemies e1 = O1.currUnits.get(0);
+      if( abs( s1.getX() - e1.getX() ) <= 50 ) {
+        int stopS = s1.getX();
+        int stopE = s1.getX() + 50;
+        for( Students s : P1.currUnits ) {
+          if( s.getX() + 2 <= stopS ) {
+            s.changeX();
+          }
+        }
+        for( Enemies e : O1.currUnits ) {
+          if( e.getX() - 2 <= stopE ) {
+            e.changeX();
+          }
+        }
+      }
+      P1.currUnits.add( 0, s1 );
+      O1.currUnits.add( 0, e1 );
+    }
+    else if( !(P1.currUnits.isEmpty()) ) {
+      for( Students s : P1.currUnits ) {
+        s.changeX(); 
+      }
+    }
+    else if( !(O1.currUnits.isEmpty()) ) {
+      for( Enemies e : O1.currUnits ) {
+        e.changeX(); 
+      }
     }
   }
   
@@ -45,8 +87,10 @@ class Levels {
   
   Player draw() {
     setup();
+    move();
     P1.draw();
     O1.draw();
+    attack();
     System.out.println("hi");
     if( !playing ) {
       noLoop();

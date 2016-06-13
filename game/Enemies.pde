@@ -25,6 +25,7 @@ class Enemies {
   int w; //unit width
   int h; //!!unit height
   
+  
   //constructors
   Enemies( int newType ) {
     //Genkina
@@ -66,7 +67,7 @@ class Enemies {
     //cooldown = type * type;
     alive = true;
     xcor = 50;
-    ycor = 205;
+    ycor = 860;
     w = 50;
   }
   
@@ -75,7 +76,12 @@ class Enemies {
   
   //makes student 'walk'
   void changeX() {
-    xcor++;
+    xcor -= 2;
+  }
+  
+  //returns X cor
+  int getX() {
+    return xcor; 
   }
   
   //returns an enemies's power

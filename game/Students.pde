@@ -26,6 +26,7 @@ class Students {
   int w; //unit width
   int h; //unit height
   
+  
   //constructor
   Students( int newType ) {
     //Freshies
@@ -90,7 +91,12 @@ class Students {
   
   //makes student 'walk'
   void changeX() {
-    xcor++;
+    xcor += 2;
+  }
+  
+  //returns X val
+  int getX() {
+    return xcor;
   }
   
   //returns a student's power

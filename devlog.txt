@@ -94,12 +94,14 @@ Arpita
 
 2016-06-12
 Arpita
-* Summary: did a ton of stuff to prepare for characters to attack, fight, die, play levels, etc
+* Summary: did a ton of stuff to prepare for characters to attack, fight, die, play levels, move, etc
 * all: adjusted setup() and draw()
-* Levels: added attack()
+* Levels: added attack(), move()
 * Opponent: created population system (enemy generation). Incorporated castles. Added populate(int), backup(), getCastleHealth(), setCastleHealth(int), setMaxCastleHealth(int).
 * Player, Opponent: incorporated alive or not system
-* Enemies: added getPower(), isAlive()
-* Students: added getPower(), isAlive()
+* Enemies: added getPower(), isAlive(), getX()
+* Students: added getPower(), isAlive(), getX()
+
+2016-06-12
 Stanley
 * Player: Created Cooldown

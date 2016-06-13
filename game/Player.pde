@@ -7,6 +7,8 @@ class Player {
   ArrayList<Students> currUnits; //all current students, dead or alive
   int[] castle; //castle health; [current, max]
   boolean alive = true; //if player not alive, game ends
+  boolean moving = true; //if player's units are moving or not
+  
   int time; //timer
   int wait; //waittime
   boolean isCool = false;
@@ -26,7 +28,9 @@ class Player {
     currUnits = new ArrayList<Students>();
   }
   
+  
   //methods
+  
   //returns amount of mana player currently has
   int getMana() {
     return mana[0];
@@ -77,14 +81,17 @@ class Player {
     castle[0] = castle[1];
   }
   
-  
-  //Processing Methods
+  //???
   void cooldown(){
     wait = 3000; //universal 3 second cooldown for all units
     if (millis() - time >= wait){
       isCool = true;
     }
   }
+  
+  
+  //Processing methods
+  
   void setup() {
     time = millis();
     loop();
@@ -93,9 +100,7 @@ class Player {
   void draw() {
     if( !alive ) {
       if( currUnits.size() > 0 ) {
-        for( Students x : currUnits ) {
-          if( x.alive ) {
-            x.changeX();
+        for( Students x : currUnits ) {{
             x.draw();
           }
         }
