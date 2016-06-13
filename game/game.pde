@@ -15,11 +15,23 @@ PImage B5;
 PImage B6;
 PImage B7;
 
-//booleans
-boolean playing = false;
+//booleans- global vars; detects 'stage' of game
+boolean playing = true;
+boolean intro = true;
+boolean level1 = false;
+boolean level2 = false;
+boolean level3 = false;
+boolean level4 = false;
+boolean level5 = false;
+boolean level6 = false;
+boolean level7 = false;
+boolean level8 = false;
+boolean level9 = false;
+boolean level10 = false;
 
 //objects
-Player P1;
+Player P1 = new Player();
+Levels L1 = new Levels( P1, 1 );
 
 void setup() {
   size(960,460);
@@ -34,37 +46,47 @@ void setup() {
   B5 = loadImage("S5.jpg");
   B6 = loadImage("S6.jpg");
   B7 = loadImage("S7.jpg");
-  smooth();
-  frameRate(60);
-  P1 = new Player();
-  noLoop();
 }
 
 void draw() {
-  setup();
-  
-  //Note: This will be added to the game screen at one point
-  System.out.println("Welcome Player.");
-  delay(120);
-  System.out.println("This is a castle defense game. You will be given MANA to use at the beginning of every round, and you must purchase units in order to defend your castle.");
-  delay(120);
-  System.out.println("If you do not defend your castle, then you will lose a life and die.");
-  delay(120);
-  System.out.println("Let's begin.");
-  
-  reset();
-  
+  if( intro ) {
+    //Note: This will be added to the game screen at one point
+    System.out.println("Welcome Player.");
+    delay(1000);
+    System.out.println("This is a castle defense game. You will be given MANA to use at the beginning of every round, and you must purchase units in order to defend your castle.");
+    delay(1000);
+    System.out.println("If you do not defend your castle, then you will lose a life and die.");
+    delay(1000);
+    System.out.println("In order to purchase a unit, type a number on your keyboard from 1-7, inclusive. It corresponds to the units on display at the bottom of the screen.");
+    delay(1000);
+    System.out.println("Click ENTER to begin.");
+    delay(1000);
+    reset();
+    intro = false;
+  }
+    
   //LEVEL 1
-  System.out.println("Level 1");
-  Player P1 = new Player();
-  Levels L1 = new Levels( P1, 1 );
-  playing = true;
-  P1 = L1.draw();
-  P1.draw();
+  if( playing && level1 ) {
+    System.out.println("Level 1");
+    L1.draw();
+    //level1 = false;
+    //level2 = true;
+  }
+    
+  /*
+  //LEVEL 2
+  if( playing && level2 ) {
+    reset();
+    System.out.println("Level 2");
+    Levels L2 = new Levels( P1, 2 );
+    L2.draw();
+    level2 = false;
+    level3 = true;
+  }
+  */
   
-  //reset();
-  System.out.println("Level 2");
-  
+  System.out.println("1");
+    
 }
 
 
@@ -74,6 +96,9 @@ void keyPressed() {
     Students x = new Students( key );
     P1.units.add( x );
     System.out.println("new unit");
+  }
+  if( key == ENTER || key == RETURN ) {
+    level1 = true; 
   }
 }
 

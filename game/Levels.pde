@@ -82,21 +82,24 @@ class Levels {
   //Processing methods
   
   void setup() {
-    loop();
   }
   
-  Player draw() {
-    setup();
+  void draw() {
+    delay(1000);
     move();
     P1.draw();
     O1.draw();
     attack();
     System.out.println("hi");
-    if( !playing ) {
-      noLoop();
-    }
-    return P1; 
   }
+  
+void keyPressed() {
+  if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
+    Students x = new Students( key );
+    P1.units.add( x );
+    System.out.println("new unit");
+  }
+}
 
   
 } //end class

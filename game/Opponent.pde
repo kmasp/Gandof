@@ -7,7 +7,7 @@ class Opponent {
   long currFrame; //current frame count
   int[] castle; //castle health; [current, max]
   boolean alive = true; //if opponent is not alive, level won
-  boolean moving = true; //if opponent's units are moving or not
+
   
   //constructor
   Opponent( int currLevel ) {
@@ -124,9 +124,6 @@ class Opponent {
         }
       }  
     } //end main if
-    else {
-      noLoop(); 
-    }
   }
   
 } //end class

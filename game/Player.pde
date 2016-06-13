@@ -7,7 +7,6 @@ class Player {
   ArrayList<Students> currUnits; //all current students, dead or alive
   int[] castle; //castle health; [current, max]
   boolean alive = true; //if player not alive, game ends
-  boolean moving = true; //if player's units are moving or not
   
   int time; //timer
   int wait; //waittime
@@ -107,9 +106,6 @@ class Player {
         }
       }  
     } //end main if
-    else {
-      noLoop(); 
-    }
   } //end draw
   
 } //end class

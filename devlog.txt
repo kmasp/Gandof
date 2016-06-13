@@ -101,6 +101,8 @@ Arpita
 * Player, Opponent: incorporated alive or not system
 * Enemies: added getPower(), isAlive(), getX()
 * Students: added getPower(), isAlive(), getX()
+* began to utilize lots of global variables for game transition- I <3 global vars
+* fixed issues with looping
 
 2016-06-12
 Stanley
