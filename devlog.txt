@@ -99,8 +99,8 @@ Arpita
 * Levels: added attack(), move()
 * Opponent: created population system (enemy generation). Incorporated castles. Added populate(int), backup(), getCastleHealth(), setCastleHealth(int), setMaxCastleHealth(int).
 * Player, Opponent: incorporated alive or not system
-* Enemies: added getPower(), isAlive(), getX()
-* Students: added getPower(), isAlive(), getX()
+* Enemies: added getPower(), isAlive(), getX(), createUnits();
+* Students: added getPower(), isAlive(), getX(), createUnits()
 * began to utilize lots of global variables for game transition- I <3 global vars
 * fixed issues with looping
 * Removed what Stanley did with queues. Not using Java/Processing (used keywords that didn’t exist, didn’t create boolean that was used in it, function has no use in current state and current implementation (partially implemented in game class also))
@@ -108,3 +108,10 @@ Arpita
 2016-06-12
 Stanley
 * Player: Created Cooldown and Queue
+
+2016-06-13
+Arpita
+* all: added/edited keyPressed()
+* game: edited keyPressed(). Added purchase()
+* Opponents: edited draw(), setup()
+* Player: edited draw(), changed variable stuff, 

@@ -22,17 +22,16 @@ class Levels {
        Enemies e1 = O1.currUnits.get(0);
        s1.setHealth( s1.getHealth() - e1.getPower() );
        e1.setHealth( e1.getHealth() - s1.getPower() );
-       if( s1.isAlive() ) {
-         P1.currUnits.add( 0, s1 );
+       if( !(s1.isAlive()) ) {
+         P1.currUnits.remove( 0 );
        }
-       if( e1.isAlive() ) {
-         O1.currUnits.add( 0, e1 ); 
+       if( !(e1.isAlive()) ) {
+         O1.currUnits.remove( 0 ); 
        }
     }
     else if( !(P1.currUnits.isEmpty()) ) {
       Students s1 = P1.currUnits.get(0);
       O1.setCastleHealth( O1.getCastleHealth() - s1.getPower() );
-      P1.currUnits.add( 0, s1 );
       O1.backup();
       O1.backup();
       O1.backup();
@@ -40,7 +39,6 @@ class Levels {
     else if( !(O1.currUnits.isEmpty()) ) {
       Enemies e1 = O1.currUnits.get(0);
       P1.setCastleHealth( P1.getCastleHealth() - e1.getPower() );
-      O1.currUnits.add( 0, e1 );
     }
   }
   
@@ -86,6 +84,8 @@ class Levels {
   
   void draw() {
     delay(1000);
+    P1.createUnits();
+    O1.createUnits();
     move();
     P1.draw();
     O1.draw();
@@ -93,13 +93,60 @@ class Levels {
     System.out.println("hi");
   }
   
-void keyPressed() {
-  if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
-    Students x = new Students( key );
-    P1.units.add( x );
-    System.out.println("new unit");
+
+  void keyPressed() {
+    if( playing ) {
+      if( key == '1' ) {
+        if( purchase(2) ) {
+          Students x = new Students( 1 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+      if( key == '2' ) {
+        if( purchase(4) ) {
+          Students x = new Students( 2 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+      if( key == '3' ) {
+        if( purchase(8) ) {
+          Students x = new Students( 3 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+      if( key == '4' ) {
+        if( purchase(16) ) {
+          Students x = new Students( 4 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+      if( key == '5' ) {
+        if( purchase(32) ) {
+          Students x = new Students( 5 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+      if( key == '6' ) {
+        if( purchase(64) ) {
+          Students x = new Students( 6 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+      if( key == '7' ) {
+        if( purchase(128) ) {
+          Students x = new Students( 7 );
+          P1.units.add( x );
+          System.out.println("new unit");
+        }
+      }
+    }
   }
-}
 
   
 } //end class

@@ -85,21 +85,77 @@ void draw() {
   }
   */
   
-  System.out.println("1");
+  //System.out.println("1");
     
 }
 
 
 //User input for keys pressed
 void keyPressed() {
-  if( playing && (key == '1' || key == '2' || key == '3' || key == '4' || key == '5' || key == '6' || key == '7' )) {
-    Students x = new Students( key );
-    P1.units.add( x );
-    System.out.println("new unit");
+  if( playing ) {
+    if( key == '1' ) {
+      if( purchase(2) ) {
+        Students x = new Students( 1 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
+    if( key == '2' ) {
+      if( purchase(4) ) {
+        Students x = new Students( 2 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
+    if( key == '3' ) {
+      if( purchase(8) ) {
+        Students x = new Students( 3 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
+    if( key == '4' ) {
+      if( purchase(16) ) {
+        Students x = new Students( 4 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
+    if( key == '5' ) {
+      if( purchase(32) ) {
+        Students x = new Students( 5 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
+    if( key == '6' ) {
+      if( purchase(64) ) {
+        Students x = new Students( 6 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
+    if( key == '7' ) {
+      if( purchase(128) ) {
+        Students x = new Students( 7 );
+        P1.units.add( x );
+        System.out.println("new unit");
+      }
+    }
   }
+  
   if( key == ENTER || key == RETURN ) {
     level1 = true; 
   }
+  
+}
+
+boolean purchase( int amount ) {
+  if( P1.getMana() >= amount ) {
+    P1.setMana( P1.getMana() - amount );
+    return true;
+  }
+  return false;
 }
 
 
