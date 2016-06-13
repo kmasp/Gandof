@@ -59,15 +59,17 @@ void draw() {
     delay(1000);
     System.out.println("In order to purchase a unit, type a number on your keyboard from 1-7, inclusive. It corresponds to the units on display at the bottom of the screen.");
     delay(1000);
+    System.out.println("The first unit you send out will be given superspeed, but only move if at least one other unit is present.");
+    delay(1000);
     System.out.println("Click ENTER to begin.");
     delay(1000);
     resetScreen();
     intro = false;
+    System.out.println("Level 1");
   }
     
   //LEVEL 1
   if( playing && level1 ) {
-    System.out.println("Level 1");
     L1.draw();
     //level1 = false;
     //level2 = true;

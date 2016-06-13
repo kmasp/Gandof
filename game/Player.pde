@@ -19,8 +19,8 @@ class Player {
   //constructor
   Player() {
     mana = new int[2];
-    mana[0] = 100;
-    mana[1] = 100;
+    mana[0] = 150;
+    mana[1] = 150;
     castle = new int[2];
     castle[0] = 100;
     castle[1] = 100;

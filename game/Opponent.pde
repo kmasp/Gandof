@@ -3,8 +3,7 @@ class Opponent {
   //instance vars
   int level; //current level
   Stack<Enemies> unitsE = new Stack(); //pregenerated list of enemies
-  ArrayList<Enemies> currUnits; //current enemies
-  long currFrame; //current frame count
+  ArrayList<Enemies> currUnits = new ArrayList<Enemies>(); //current enemies
   int[] castle; //castle health; [current, max]
   boolean alive = true; //if opponent is not alive, level won
 
@@ -13,8 +12,6 @@ class Opponent {
   Opponent( int currLevel ) {
     level = currLevel;
     populate( level );
-    currFrame = frameCount;
-    currUnits = new ArrayList<Enemies>();
     castle = new int[2];
     castle[0] = 100 + level * 5;
     castle[0] = 100 + level * 5;
@@ -110,7 +107,7 @@ class Opponent {
   
   //moves from stack to arraylist
   void createUnits() {
-    if( unitsE.size() > 0 && (frameCount % 65 == 0 || frameCount <= 1000) ) {
+    if( unitsE.size() > 0 && (frameCount % 60 == 0 || frameCount <= 1000) ) {
       currUnits.add( unitsE.pop() ); 
     }
   }
@@ -123,12 +120,11 @@ class Opponent {
   void draw() {
     if( alive ) {
       if( currUnits.size() > 0 ) {
-        for( Enemies x : currUnits ) {{
-            x.draw();
-          }
+        for( Enemies x : currUnits ) {
+          x.draw();
         }
-      }  
-    } //end main if
+      }
+    }  
   }
   
   

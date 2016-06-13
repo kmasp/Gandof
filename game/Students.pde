@@ -91,7 +91,9 @@ class Students {
   
   //makes student 'walk'
   void changeX() {
-    xcor += 2;
+    if( xcor + 2 <= 835 ) {
+      xcor += 2;
+    }
   }
   
   //returns X val

@@ -66,8 +66,9 @@ class Enemies {
     type = newType;
     //cooldown = type * type;
     alive = true;
-    xcor = 50;
-    ycor = 860;
+    xcor = 860;
+    ycor = 205;
+    h = 50;
     w = 50;
   }
   
@@ -76,7 +77,9 @@ class Enemies {
   
   //makes student 'walk'
   void changeX() {
-    xcor -= 2;
+    if( xcor - 2 >= 120 ) {
+      xcor -= 2;
+    }
   }
   
   //returns X cor
